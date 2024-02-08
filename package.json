@@ -6,22 +6,33 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migration:create": "dotenv -- sequelize-cli migration:create",
+    "migrate": "dotenv -- sequelize-cli db:migrate",
+    "migrate:rollback": "dotenv -- sequelize-cli db:migrate:undo",
+    "migrate:rollback:all": "dotenv -- sequelize-cli db:migrate:undo:all"
   },
   "dependencies": {
+    "mysql2": "^3.9.1",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "reflect-metadata": "^0.2.1",
+    "sequelize": "^6.36.0",
+    "sequelize-typescript": "^2.1.6"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
+    "@types/node": "^20.11.16",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/validator": "^13.11.8",
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "dotenv-cli": "^7.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "sequelize-cli": "^6.6.2",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }
